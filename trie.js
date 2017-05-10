@@ -1,3 +1,6 @@
+import 'babel-polyfill';
+import http from 'http';
+
 export default class Trie {
 
   constructor(words = []) {
@@ -71,13 +74,3 @@ class TrieNode {
   }
 
 }
-
-const trie = new Trie();
-
-trie.add('dog');
-trie.add('dirty');
-trie.add('do');
-trie.add('dirt');
-trie.add('empty');
-
-console.log(trie.getPrefixMatches('dir'));
